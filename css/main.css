@@ -6,6 +6,7 @@
   --color-grayish-blue: hsl(212, 23%, 69%);
   --color-light-grayish-blue: hsl(210, 46%, 95%);
   --color-white: hsl(0, 0%, 100%);
+  --color-purple: hsl(228, 45%, 44%);
 
   --font-weight-light: 200;
   --font-weight-regular: 500;
@@ -168,5 +169,14 @@ html {
   background: var(--color-desaturated-dark-blue);
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 1rem;
+  font-size: 0.6rem;
+  text-align: center;
+}
+
+.attribution__link {
+  color: var(--color-purple);
+}
