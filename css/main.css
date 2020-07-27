@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;500;700;800&display=swap');
 
 :root {
   --color-very-dark-grayish-blue: hsl(217, 19%, 35%);
@@ -7,8 +7,12 @@
   --color-light-grayish-blue: hsl(210, 46%, 95%);
   --color-white: hsl(0, 0%, 100%);
 
+  --font-weight-light: 200;
   --font-weight-regular: 500;
   --font-weight-bold: 800;
+
+  --border-radius-top: 10px 10px 0 0;
+  --border-radius-bottom: 0 0 10px 10px;
 }
 
 * {
@@ -42,7 +46,7 @@ html {
 
 .card__image {
   max-width: 100%;
-  border-radius: 10px 10px 0 0;
+  border-radius: var(--border-radius-top);
   height: 12.5rem;
   width: 100%;
   object-fit: cover;
@@ -52,37 +56,46 @@ html {
 .card__content {
   position: relative;
   background: var(--color-white);
-  padding: 1.9rem 2rem 1rem 2rem;
-  border-radius: 0 0 10px 10px;
+  padding: 1.9rem 2rem 1.1rem 2rem;
+  border-radius: var(--border-radius-bottom);
 }
 
 .card__title {
   font-size: 1rem;
   font-weight: var(--font-weight-bold);
   color: var(--color-very-dark-grayish-blue);
-  line-height: 1.5rem;
+  line-height: 1.55rem;
 }
 
 .card__description {
   display: inline-block;
   margin-top: 0.8rem;
   font-size: 0.78rem;
-  line-height: 1.2rem;
+  line-height: 1.25rem;
   letter-spacing: 0.025rem;
   color: var(--color-desaturated-dark-blue);
 }
 
-.card__credits{
+.card__footer{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem 1.1rem 2rem;
+  padding: 1rem 2rem 1rem 2rem;
 }
 
-.card__profile {
+.card__footer--active {
+  background: var(--color-very-dark-grayish-blue);
+  border-radius: var(--border-radius-bottom);
+}
+
+.card__credits {
   width: 100%;
   display: flex;
   align-items: center;
+}
+
+.card__footer--active .card__credits {
+  display: none;
 }
 
 .card__avatar {
@@ -110,6 +123,33 @@ html {
   font-size: 0.78rem;
 }
 
+.card__links {
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 3.5rem;
+}
+
+.card__footer--active .card__links {
+  display: flex;
+}
+
+.card__share-label {
+  color: var(--color-grayish-blue);
+  font-weight: var(--font-weight-light);
+  font-size: 0.85rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.card__social-media {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 1rem;
+}
+
 .card__share-button {
   width: 2.3rem;
   height: 2rem;
@@ -120,6 +160,11 @@ html {
   background: var(--color-light-grayish-blue);
   font-size: 0.9rem;
   color: var(--color-desaturated-dark-blue);
+}
+
+.card__footer--active > .card__share-button {
+  color: var(--color-light-grayish-blue);
+  background: var(--color-desaturated-dark-blue);
 }
 
 .attribution { font-size: 11px; text-align: center; }
