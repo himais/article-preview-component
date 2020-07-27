@@ -29,6 +29,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: var(--color-light-grayish-blue);
 }
 
@@ -45,13 +46,13 @@ html {
   height: 12.5rem;
   width: 100%;
   object-fit: cover;
-  object-position: 50% 30%;
+  object-position: 50% 32%;
 }
 
 .card__content {
   position: relative;
   background: var(--color-white);
-  padding: 1.9rem 2rem 1.1rem 2rem;
+  padding: 1.9rem 2rem 1rem 2rem;
   border-radius: 0 0 10px 10px;
 }
 
@@ -73,9 +74,9 @@ html {
 
 .card__credits{
   display: flex;
-  margin-top: 2rem;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem 2rem 1.1rem 2rem;
 }
 
 .card__profile {
