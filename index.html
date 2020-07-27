@@ -31,7 +31,7 @@
         </p>
       </div>
 
-      <div class="card__footer card__footer--active">
+      <div class="card__footer" id="card-footer">
         <div class="card__credits">
           <img class="card__avatar" src="images/avatar-michelle.jpg" />
 
@@ -49,13 +49,19 @@
           <span class="card__share-label"> share </span> 
 
           <div class="card__social-media">
-            <img src="./images/icon-facebook.svg">
-            <img src="./images/icon-twitter.svg">
-            <img src="./images/icon-pinterest.svg">
+            <a href="#">
+              <img src="./images/icon-facebook.svg">
+            </a>
+            <a href="#">
+              <img src="./images/icon-twitter.svg">
+            </a>
+            <a href="#">
+              <img src="./images/icon-pinterest.svg">
+            </a>
           </div>
         </div>
 
-        <div class="card__share-button">
+        <div class="card__share-button" onclick="toggleMenu()">
           <i class="fas fa-share"></i>
         </div>
       </div>
@@ -68,5 +74,6 @@
 </body>
 
 <script src="https://kit.fontawesome.com/4ccfe9eeb4.js" crossorigin="anonymous"></script>
+<script src="./script/index.js"></script>
 
 </html>
