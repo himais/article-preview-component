@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap');
+
+:root {
+  --color-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --color-desaturated-dark-blue: hsl(214, 17%, 51%);
+  --color-grayish-blue: hsl(212, 23%, 69%);
+  --color-light-grayish-blue: hsl(210, 46%, 95%);
+  --color-white: hsl(0, 0%, 100%);
+
+  --font-weight-regular: 500;
+  --font-weight-bold: 800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+  font-weight: var(--font-weight-regular);
+};
+
+html {
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-light-grayish-blue);
+}
+
+.card {
+  width: 87vw;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0px 16px 60px -35px var(--color-grayish-blue);
+}
+
+.card__image {
+  max-width: 100%;
+  border-radius: 10px 10px 0 0;
+  height: 12.5rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.card__content {
+  position: relative;
+  background: var(--color-white);
+  padding: 1.9rem 2rem 1.1rem 2rem;
+  border-radius: 0 0 10px 10px;
+}
+
+.card__title {
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-very-dark-grayish-blue);
+  line-height: 1.5rem;
+}
+
+.card__description {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 0.78rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.025rem;
+  color: var(--color-desaturated-dark-blue);
+}
+
+.card__credits{
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.card__avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.card__author {
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-very-dark-grayish-blue);
+  line-height: 1.5rem;
+}
+
+.card__date {
+  color: var(--color-grayish-blue);
+  font-size: 0.78rem;
+}
+
+.card__share-button {
+  width: 2.3rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--color-light-grayish-blue);
+  font-size: 0.9rem;
+  color: var(--color-desaturated-dark-blue);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
