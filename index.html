@@ -18,59 +18,80 @@
     <div class="card">
       <img class="card__image" src="images/drawers.jpg" />
 
-      <div class="card__content">
-        <h1 class="card__title">
-          Shift the overall look and feel by adding these wonderful
-          touches to furniture in your home
-        </h1>
+      <div>
+        <div class="card__content">
+          <h1 class="card__title">
+            Shift the overall look and feel by adding these wonderful
+            touches to furniture in your home
+          </h1>
 
-        <p class="card__description">
-          Ever been in a room and felt like something was missing? Perhaps
-          it felt slightly bare and uninviting. I’ve got some simple tips
-          to help you make any room feel complete.
-        </p>
-      </div>
-
-      <div class="card__footer" id="card-footer">
-        <div class="card__credits">
-          <img class="card__avatar" src="images/avatar-michelle.jpg" />
-
-          <div class="card__info">
-            <span class="card__author">
-              Michelle Appleton
-            </span>
-            <span class="card__date">
-              28 Jun 2020
-            </span>
-          </div>
+          <p class="card__description">
+            Ever been in a room and felt like something was missing? Perhaps
+            it felt slightly bare and uninviting. I’ve got some simple tips
+            to help you make any room feel complete.
+          </p>
         </div>
 
-        <div class="card__links">
-          <span class="card__share-label"> share </span> 
+        <div class="card__footer" id="card-footer">
+          <div class="card__credits">
+            <img class="card__avatar" src="images/avatar-michelle.jpg" />
 
-          <div class="card__social-media">
-            <a href="#">
-              <img src="./images/icon-facebook.svg">
-            </a>
-            <a href="#">
-              <img src="./images/icon-twitter.svg">
-            </a>
-            <a href="#">
-              <img src="./images/icon-pinterest.svg">
-            </a>
+            <div class="card__info">
+              <span class="card__author">
+                Michelle Appleton
+              </span>
+              <span class="card__date">
+                28 Jun 2020
+              </span>
+            </div>
           </div>
-        </div>
 
-        <div class="card__share-button" onclick="toggleMenu()">
-          <i class="fas fa-share"></i>
+          <div class="card__links" id="social-media-links">
+            <span class="card__share-label"> share </span>
+
+            <div class="card__social-media">
+              <a class="card__social-media-item" href="#">
+                <img src="./images/icon-facebook.svg">
+              </a>
+              <a class="card__social-media-item" href="#">
+                <img src="./images/icon-twitter.svg">
+              </a>
+              <a class="card__social-media-item" href="#">
+                <img src="./images/icon-pinterest.svg">
+              </a>
+            </div>
+          </div>
+
+          <div class="card__share-button" id="share-button" onclick="toggleMenu()">
+            <i class="fas fa-share"></i>
+            <div class="tooltip" id="tooltip">
+              <div class="card__links">
+                <span class="card__share-label"> share </span>
+
+                <div class="card__social-media">
+                  <a class="card__social-media-item" href="#">
+                    <img src="./images/icon-facebook.svg">
+                  </a>
+                  <a class="card__social-media-item" href="#">
+                    <img src="./images/icon-twitter.svg">
+                  </a>
+                  <a class="card__social-media-item" href="#">
+                    <img src="./images/icon-pinterest.svg">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="attribution">
-      Challenge by <a class="attribution__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Challenge by <a class="attribution__link" href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank">Frontend Mentor</a>.
       Coded by <a class="attribution__link" href="https://github.com/himais" target="_blank">Maíra @himais</a>.
     </div>
+  </div>
 </body>
 
 <script src="https://kit.fontawesome.com/4ccfe9eeb4.js" crossorigin="anonymous"></script>

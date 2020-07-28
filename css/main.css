@@ -14,6 +14,8 @@
 
   --border-radius-top: 10px 10px 0 0;
   --border-radius-bottom: 0 0 10px 10px;
+  --border-radius-left: 10px 0 0 10px;
+  --border-radius-right: 0 10px 10px 0;
 }
 
 * {
@@ -52,6 +54,7 @@ html {
   width: 100%;
   object-fit: cover;
   object-position: 50% 26%;
+  filter: brightness(102%) opacity(95%);
 }
 
 .card__content {
@@ -186,6 +189,11 @@ html {
   position: relative;
   z-index: 1;
   transition: .2s;
+  cursor: pointer;
+}
+
+.tooltip {
+  display: none;
 }
 
 .card__footer--active > .card__share-button {
@@ -203,4 +211,92 @@ html {
 
 .attribution__link {
   color: var(--color-purple);
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    display: flex;
+    width: 50.5vw;
+    border-radius: 10px;
+  }
+
+  .card__image {
+    width: 39%;
+    height: auto;
+    object-position: 5% 25%;
+    border-radius: var(--border-radius-left);
+  }
+
+  .card__content {
+    padding: 2rem 2.5rem 0.7rem 2.5rem;
+    border-radius: var(--border-radius-right);
+  }
+
+  .card__title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .card__footer {
+    margin-bottom: 1rem;
+    padding: 0 2.5rem;
+  }
+
+  .card__avatar {
+    margin-top: 0.2rem;
+  }
+
+  .card__credits {
+    margin-top: 0;
+  }
+
+  .card__share-button {
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+
+  .card__share-button--active.card__share-button {
+    color: var(--color-light-grayish-blue);
+    background: var(--color-desaturated-dark-blue);
+  }
+
+  .tooltip {
+    position: absolute;
+    display: block;
+    background: var(--color-very-dark-grayish-blue);
+    transform: translateY(-50%);
+    opacity: 0;
+    width: 16rem;
+    padding: 0.9rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 1px 5px 20px -6px var(--color-grayish-blue);
+    pointer-events: none;
+    transition: transform .4s, opacity .2s;
+  }
+
+  .card__share-button--active .tooltip {
+    pointer-events: initial;
+    opacity: 1;
+    transform: translateY(-130%);
+  }
+
+  .tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -0.8rem;
+    border-width: 0.8rem;
+    border-style: solid;
+    border-color: var(--color-very-dark-grayish-blue) transparent transparent transparent;
+  }
+
+  .tooltip .card__links {
+    display: flex;
+    padding-right: 0;
+  }
+
+  .card__share-label {
+    font-size: 0.8rem;
+  }
 }
