@@ -29,8 +29,8 @@ const addLinkClickEvent = () => {
 const checkOutsideClickForDesktop = () => {
   const button = document.getElementById(shareButtonId);
   const tooltip = document.getElementById(tooltipId);
-  var isClickInside = tooltip.contains(event.target);
-  var isButtonClick = button.contains(event.target);
+  const isClickInside = tooltip.contains(event.target);
+  const isButtonClick = button.contains(event.target);
 
   return isClickInside || isButtonClick;
 }
